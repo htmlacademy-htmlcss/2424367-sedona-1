@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алиса Антипкина](https://up.htmlacademy.ru/htmlcss-individual/1/user/2424367).
-* Наставник: `Сергей Остаповец`.
+* Наставник: [Сергей Остаповец] (https://htmlacademy.ru/profile/seraphim)
 
 ---
 
