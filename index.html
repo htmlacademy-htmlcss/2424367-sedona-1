@@ -21,39 +21,46 @@
 
         <a class="navigation-link" href="#">Поиск</a>
 
-        <a class="navigation-link" href="#">Избранное</a>
+        <a class="navigation-link-favorites" href="#">Избранное</a>
 
-        <a class="navigation-link" href="#">Хочу сюда!</a>
+        <a class="navigation-link-search" href="#">Хочу сюда!</a>
       </nav>
       <link rel="stylesheet" href="styles/styles.css">
     </header>
 
     <main class="main">
-      <section class="advantages">
+      <section class="hero">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      </section>
+
+      <section class="advantages">
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item city">
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="images/photo-1.jpg" width="800" height="385" alt="photo-1">
           </li>
           <li class="advantages-item">
+            <img src="images/photo-1.jpg" width="800" height="385" alt="photo-1">
+          </li>
+          <li class="advantages-item area">
             <h3>Небольшая площадь</h3>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item road">
             <h3>Красивая дорога</h3>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item tourist">
             <h3>Мало туристов</h3>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item">
+            <img src="images/photo-2.jpg" width="800" height="385" alt="photo-2">
+          </li>
+          <li class="advantages-item bridge">
             <h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="images/photo-2.jpg" width="800" height="385" alt="photo-2">
           </li>
         </ul>
       </section>
@@ -66,7 +73,7 @@
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="services-item">
+          <li class="services-item food">
             <h3>Еда</h3>
             <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
@@ -88,7 +95,7 @@
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="info-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field" placeholder="Ваш e-mail" type="email" name="info-email" id="info-email" required>
-          <button class="button info-button" type="submit">Подписаться</button>
+          <button class="button info-button" type="submit"><span>Подписаться</span></button>
         </form>
       </section>
     </main>
@@ -113,7 +120,7 @@
       </section>
 
       <section class="footer-logo">
-        <a class="navigation-link" href="ttps://htmlacademy.ru/">.html academy</a>
+        <a class="navigation-link" href="https://htmlacademy.ru/">.html academy</a>
       </section>
     </footer>
   </body>
