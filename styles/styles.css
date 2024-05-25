@@ -14,10 +14,6 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -59,6 +55,7 @@ body {
   padding-bottom: 20px;
   padding-left: 16px;
   text-decoration: none;
+  position: relative;
 }
 
 .navigation-link {
@@ -80,6 +77,11 @@ body {
   text-decoration: none;
 }
 
+.navigation-link-search {
+  background-image: url(../images/general/search.svg);
+  background-repeat: no-repeat;
+}
+
 .navigation-link-favorites {
   color: #000000;
   padding-top: 22px;
@@ -87,6 +89,11 @@ body {
   padding-bottom: 22px;
   padding-left: 12px;
   text-decoration: none;
+}
+
+.navigation-link-favorites {
+  background-image: url(../images/general/heart.svg);
+  background-repeat: no-repeat;
 }
 
 .navigation-link-desire {
@@ -107,6 +114,10 @@ body {
   background-color: #F2F2F2;
   background-size: cover;
   min-height: 485px;
+}
+
+.hero-mountains {
+  background-image: url("../images/hero.svg");
 }
 
 /* Здесь начинается блок advantages */
@@ -180,13 +191,28 @@ body {
 }
 
 .services-item,
-.services-item food {
+.services-item-food {
   min-width: 400px;
   min-height: 385px;
 }
 
-.food {
+.services-item-food {
   background: white;
+}
+
+.services-item-habitation {
+  background-image: url("../images/house.svg");
+  background-repeat: no-repeat;
+}
+
+.services-item-food {
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+}
+
+.services-item-souvenirs {
+  background-image: url("../images/souvenirs.svg");
+  background-repeat: no-repeat;
 }
 
 /* Здесь начинается блок appointment */
@@ -259,6 +285,21 @@ body {
   color: #000000;
 }
 
+.footer-social-link-vk {
+  background-image: url("../images/general/vk.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-link-tw {
+  background-image: url("../images/general/telegram.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-link-yt {
+  background-image: url("../images/general/youtube.svg");
+  background-repeat: no-repeat;
+}
+
 /* Здесь начинается страница каталог */
 
 .central-inner {
@@ -294,6 +335,16 @@ body {
   padding-left: 0;
 }
 
+.breadcrumbs-home-link {
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/catalog/small-house.svg);
+  background-size: cover;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
 /* Здесь начинатся блок catalog-filter */
 
 .catalog-filter {
@@ -323,11 +374,12 @@ body {
   width: 191px;
   height: 36px;
   background: transparent;
+  border: none;
 }
 
-/* Здесь начинается блок catalog-rezults */
+/* Здесь начинается блок catalog-results */
 
-.catalog-rezults {
+.catalog-results {
   display: flex;
   justify-content: space-around;
 }
@@ -404,7 +456,6 @@ body {
   background: #7DB54F;
   color: white;
   text-transform: uppercase;
-
 }
 
 /* Здесь начинается блок pagination */
@@ -553,7 +604,7 @@ p {
   color: #FFFFFF;
 }
 
-.catalog-rezults p {
+.catalog-results p {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -569,12 +620,26 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px;
+  padding: 12px 20px;
   gap: 94px;
   width: 292px;
   height: 49px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  appearance: none;
+  background-image: url(../images/catalog/jackdaw-2.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 40px;
+}
+
+.select-control-wrap-sorting:hover {
+  border-color: #68a2ca;
+}
+
+.select-control-wrap-sorting:focus {
+  border-color: #3f5e72;
+  outline: none;
 }
 
 .hotel-card-title {
@@ -623,4 +688,40 @@ p {
   font-size: 20px;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding-left: 64px;
+  background-color: #FFFFFF;
+}
+
+.modal-auth {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 44px;
+  background-color: #FFFFFF;
+  border: none;
+  background-image: url(../images/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
