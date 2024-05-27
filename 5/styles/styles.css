@@ -32,6 +32,11 @@ body {
   text-align: center;
 }
 
+.header {
+  z-index: 1;
+  position: relative;
+}
+
 /* Здесь начинается блок navigation */
 
 .navigation {
@@ -46,6 +51,7 @@ body {
 
 .navigation-logo {
   margin-bottom: -10px;
+  align-self: flex-start;
 }
 
 .navigation-link active {
@@ -55,7 +61,18 @@ body {
   padding-bottom: 20px;
   padding-left: 16px;
   text-decoration: none;
-  position: relative;
+}
+
+.navigation-link active::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #756257;
+  bottom: 0;
+  position: absolute;
+  z-index: 22;
+  left: 0;
 }
 
 .navigation-link {
@@ -80,6 +97,8 @@ body {
 .navigation-link-search {
   background-image: url(../images/general/search.svg);
   background-repeat: no-repeat;
+  font-size: 0;
+  background-position: 50%;
 }
 
 .navigation-link-favorites {
@@ -94,6 +113,8 @@ body {
 .navigation-link-favorites {
   background-image: url(../images/general/heart.svg);
   background-repeat: no-repeat;
+  font-size: 0;
+  background-position: 50%;
 }
 
 .navigation-link-desire {
@@ -104,8 +125,13 @@ body {
   padding-right: 34px;
   padding-bottom: 8px;
   padding-left: 34px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #756157;
+  background: #756157;
   text-decoration: none;
+  border-radius: 4px;
+}
+
+.navigation-link-favorites a:hover {
+  opacity: .5;
 }
 
 /* Здесь начинается блок hero */
@@ -117,8 +143,33 @@ body {
 }
 
 .hero-mountains {
-  background-image: url("../images/hero.svg");
+  position: relative;
 }
+
+.hero-mountains::before {
+  background-image: url("../images/hero.svg");
+  content: "";
+  display: block;
+  width: 458px;
+  height: 352px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+}
+
+.hero-mountains::after {
+  background-image: url("../images/border.svg");
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 57px;
+  bottom: 0;
+  width: 100%;
+}
+
 
 /* Здесь начинается блок advantages */
 
@@ -150,12 +201,22 @@ body {
   background: #82B3D3;
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 81px;
 }
 
 .area {
   background: rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 81px;
+}
+
+.area h3,
+.road h3,
+.tourist h3 {
+  max-width: 175px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .road {
@@ -163,12 +224,15 @@ body {
   background: rgba(131, 179, 211, 0.2);
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 81px;
 }
 
 .tourist {
   background: rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 81px;
+
 }
 
 .bridge {
@@ -203,16 +267,35 @@ body {
 .services-item-habitation {
   background-image: url("../images/house.svg");
   background-repeat: no-repeat;
+  width: 400px;
+  background-position: 50% 50px;
+  padding-top: 100px;
 }
 
 .services-item-food {
   background-image: url("../images/food.svg");
   background-repeat: no-repeat;
+  width: 400px;
+  background-position: 50% 50px;
+  padding-top: 100px;
 }
 
 .services-item-souvenirs {
   background-image: url("../images/souvenirs.svg");
   background-repeat: no-repeat;
+  width: 400px;
+  background-position: 50% 50px;
+  padding-top: 100px;
+}
+
+.services-item-habitation p,
+.services-item-food p,
+.services-item-souvenirs p {
+  max-width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* Здесь начинается блок appointment */
@@ -222,6 +305,12 @@ body {
   margin: 90px;
 }
 
+.appointment p {
+    max-width: 592px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 .appointment-link {
   display: block;
   width: 376px;
@@ -229,9 +318,13 @@ body {
   background: #756157;
   margin: auto;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 8px 50px;
   border-radius: 10px;
 }
+
+  .appointment-link:hover {
+    opacity: .5;
+  }
 
 /* Здесь начинается блок info */
 
@@ -246,7 +339,6 @@ body {
 .info-button {
   background: #82B3D3;
   border-radius: 0 10px 10px 0;
-  padding: 8px 50px;
 }
 
 .info-form {
@@ -270,34 +362,67 @@ body {
   align-items: center;
   padding: 0;
   gap: 40px;
-  width: 1060px;
-  height: 50px;
-  left: 70px;
-  top: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .footer-social-list {
   display: flex;
+  width: 142px;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding: 20px;
 }
 
 .footer-contacts-phone {
   font-size: 40px;
   color: #000000;
+  text-decoration: none;
 }
 
 .footer-social-link-vk {
   background-image: url("../images/general/vk.svg");
   background-repeat: no-repeat;
+  font-size: 0;
+  width: 24px;
+  display: inline-block;
+  height: 14px;
+  background-position: 50%;
 }
 
 .footer-social-link-tw {
   background-image: url("../images/general/telegram.svg");
   background-repeat: no-repeat;
+  font-size: 0;
+  width: 18px;
+  display: inline-block;
+  height: 15.1px;
+  background-position: 50%;
 }
 
 .footer-social-link-yt {
   background-image: url("../images/general/youtube.svg");
   background-repeat: no-repeat;
+  font-size: 0;
+  width: 22px;
+  display: inline-block;
+  height: 17px;
+  background-position: 50%;
+}
+
+.footer-social-link-vk:hover {
+  opacity: .5;
+}
+
+.footer-social-link-tw:hover {
+  opacity: .5;
+}
+
+.footer-social-link-yt:hover {
+  opacity: .5;
 }
 
 /* Здесь начинается страница каталог */
@@ -495,6 +620,9 @@ li {
 .city h3,
 .bridge h3 {
   color: #FFFFFF;
+  max-width: 175px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .city p,
@@ -506,9 +634,25 @@ li {
   color: #333333;
 }
 
+.city p,
+.area p,
+.road p,
+.tourist p,
+.bridge p {
+  max-width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+}
+
 h2 {
   font-size: 30px;
   text-transform: uppercase;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .appointment-link {
@@ -548,6 +692,9 @@ h2 {
 .info p {
   color: #FFFFFF;
   padding-bottom: 54px;
+  max-width: 475px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
@@ -697,7 +844,8 @@ p {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 111;
 }
 
 .modal {
