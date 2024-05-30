@@ -44,7 +44,7 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -54,20 +54,18 @@ body {
   align-self: flex-start;
 }
 
-.navigation-link active {
+.navigation-link.active {
   color: #000000;
   padding-top: 20px;
-  padding-right: 16px;
   padding-bottom: 20px;
-  padding-left: 16px;
   text-decoration: none;
 }
 
-.navigation-link active::before {
+.navigation-link.active::before {
   content: "";
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: #756257;
   bottom: 0;
   position: absolute;
@@ -78,10 +76,9 @@ body {
 .navigation-link {
   color: #000000;
   padding-top: 20px;
-  padding-right: 16px;
   padding-bottom: 20px;
-  padding-left: 16px;
   text-decoration: none;
+  position: relative;
 }
 
 .navigation-link-search {
@@ -137,26 +134,15 @@ body {
 /* Здесь начинается блок hero */
 
 .hero-mountains img {
-  background-color: #F2F2F2;
-  background-size: cover;
-  min-height: 485px;
+  padding: 51px 371px 51px 371px;
 }
 
 .hero-mountains {
   position: relative;
-}
-
-.hero-mountains::before {
-  background-image: url("../images/hero.svg");
-  content: "";
-  display: block;
-  width: 458px;
-  height: 352px;
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 70px;
+  background-image: url(../images/background-1.jpg);
+  background-color: #3f5e72;
+  min-height: 485px;
+  background-size: cover;
 }
 
 .hero-mountains::after {
@@ -182,10 +168,14 @@ body {
 
 .advantages-item-picture-1 img {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages-item-picture-2 img {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages-item-picture-1 {
@@ -200,39 +190,37 @@ body {
 .bridge {
   background: #82B3D3;
   box-sizing: border-box;
-  padding: 20px;
-  padding-top: 81px;
+  padding: 110px 85px 110px 85px;
 }
 
 .area {
   background: rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
-  padding: 20px;
-  padding-top: 81px;
+  padding: 110px 85px 110px 85px;
 }
 
 .area h3,
 .road h3,
 .tourist h3 {
-  max-width: 175px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tourist h3 {
+ max-width: 175px;
 }
 
 .road {
   min-height: 385px;
   background: rgba(131, 179, 211, 0.2);
   box-sizing: border-box;
-  padding: 20px;
-  padding-top: 81px;
+  padding: 110px 85px 110px 85px;
 }
 
 .tourist {
   background: rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
-  padding: 20px;
-  padding-top: 81px;
-
+  padding: 110px 85px 110px 85px;
 }
 
 .bridge {
@@ -256,7 +244,6 @@ body {
 
 .services-item,
 .services-item-food {
-  min-width: 400px;
   min-height: 385px;
 }
 
@@ -267,31 +254,36 @@ body {
 .services-item-habitation {
   background-image: url("../images/house.svg");
   background-repeat: no-repeat;
-  width: 400px;
+  width: 300px;
   background-position: 50% 50px;
   padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .services-item-food {
   background-image: url("../images/food.svg");
   background-repeat: no-repeat;
-  width: 400px;
+  width: 300px;
   background-position: 50% 50px;
   padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .services-item-souvenirs {
   background-image: url("../images/souvenirs.svg");
   background-repeat: no-repeat;
-  width: 400px;
+  width: 300px;
   background-position: 50% 50px;
   padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .services-item-habitation p,
 .services-item-food p,
 .services-item-souvenirs p {
-  max-width: 230px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
@@ -339,6 +331,7 @@ body {
 .info-button {
   background: #82B3D3;
   border-radius: 0 10px 10px 0;
+  padding: 8px 50px 8px 50px;
 }
 
 .info-form {
@@ -423,6 +416,12 @@ body {
 
 .footer-social-link-yt:hover {
   opacity: .5;
+}
+
+.footer-link-logo {
+  margin-right: 70px;
+  text-decoration: none;
+  color: #000000;
 }
 
 /* Здесь начинается страница каталог */
@@ -620,7 +619,6 @@ li {
 .city h3,
 .bridge h3 {
   color: #FFFFFF;
-  max-width: 175px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -639,7 +637,6 @@ li {
 .road p,
 .tourist p,
 .bridge p {
-  max-width: 230px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
