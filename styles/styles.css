@@ -1017,6 +1017,22 @@ p {
   width: 717px;
 }
 
+.visually-hidden-close-button {
+  font-size: 0;
+}
+
+.button.auth-form-register {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #83B3D3;
+  border-radius: 10px;
+  color: #FFFFFF;
+  width: 577px;
+  height: 60px;
+  display: inline-block;
+}
+
 .modal-close-button {
   position: absolute;
   padding: 0;
